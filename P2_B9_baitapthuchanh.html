@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Giá trị của cạnh a hình tam giác: ',);
+    let b = +prompt('Giá trị của cạnh b hình tam giác: ',);
+    let c = +prompt('Giá trị của cạnh c hình tam giác: ',);
+
+    if (a*b*c >0) {
+        if (a +b >c) {
+            if (b + c > a) {
+               if (a + c > b) {
+                   alert('a,b,c là 3 cạnh của một tam giác')
+               } else {
+                   alert('Không phải là 3 cạnh của một tam giác')
+               }
+            }   else {
+                alert('Không phải là 3 cạnh của một tam giác')
+            }
+        } else {
+            alert('Không phải là 3 cạnh của một tam giác')
+        }
+    } else {
+        alert('Không phải là 3 cạnh của một tam giác');
+    }
+
+</script>
+
+
+
+</body>
+</html>

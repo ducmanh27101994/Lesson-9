@@ -9,7 +9,23 @@
 <p>ax**2 + bx + C = 0</p>
 
 <script>
-    let a = +prompt('Nhập giá trị số hạng thứ 1: ',)
+    let a = +prompt('Nhập giá trị số hàng thứ 1: ',);
+    let b = +prompt('Nhập giá trị số hàng thứ 2:',);
+    let c = +prompt('Nhập giá trị số hàng thứ 3; ',);
+
+    delta = (b*b) - (4 *a * c);
+
+    if (delta<0) {
+        alert('Phương trình vô nghiệm')
+    } else if (delta == 0) {
+        x = -b/2*a;
+        alert(x);
+        } else {
+        x1 = (-b + Math.sqrt(delta))/(2*a);
+        alert(x1);
+        x2 = (-b - Math.sqrt(delta))/(2*a);
+        alert(x2);
+    }
 
 
 </script>
