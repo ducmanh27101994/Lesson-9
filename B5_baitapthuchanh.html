@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</title>
+</head>
+<body>
+<h1>Xếp hạng học sinh</h1>
+<p>Điểm trung bình >= 8 (Loại Giỏi)</p>
+<p> 8 > Điểm trung bình >= 6 (Loại Khá)</p>
+<p> 6 >= Điểm trung bình > 4 (Loại Trung Bình)</p>
+<p> 4 >= Điểm trung bình (Loại Yếu)</p>
+<p> Điểm trung bình năm = [(Thi Giữa Kỳ + Thi Cuối Kỳ * 2)]/3 </p>
+
+<script>
+    let a = +prompt('Điểm thi giữa kỳ:',);
+    let b = +prompt('Điểm thi cuối:',);
+    area = ((a + b * 2)/3);
+
+    if (area>=8) {
+        alert('Loại Giỏi');
+    } else if (area>=6) {
+        alert('Loại Khá');
+        } else if (area>=4) {
+        alert('Loại Trung Bình');
+            } else {
+        alert('Loại Yếu');
+    }
+
+</script>
+
+</body>
+</html>

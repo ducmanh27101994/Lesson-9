@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</title>
+</head>
+<body>
+<h1>Thông số cước điện thoại trong tháng</h1>
+<p>Từ 1p - 1000p (Cước 800đ/phút)</p>
+<p>Từ 1000p - 2000p (Cước 600đ/phút)</p>
+<p>Từ 2000p - 4000p (Cước 400đ/phút)</p>
+<p>Lớn hơn 4000p (Cước 200đ/phút)</p>
+
+<script>
+    let a = +prompt('Số phút gọi trong một tháng gia đình bạn là: ',);
+    a1 = a * 800
+    a2 = a * 600
+    a3 = a * 400
+    a4 = a * 200
+
+    if (a>=4000) {
+        alert('Số tiền điện thoại trong tháng bạn là: ' +a4);
+    } else if (a<4000) {
+            alert('Số tiền điện thoại trong tháng bạn là: ' +a3);
+        } else if (a<2000) {
+                alert('Số tiền điện thoại trong tháng bạn là: ' +a2);
+            } else if (a<1000) {
+                    alert('Số tiền điện thoại trong tháng bạn là: ' +a1);
+    }
+
+</script>
+
+</body>
+</html>
