@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</title>
+</head>
+<body>
+<h1>Tính thuế thu nhập ca nhân</h1>
+<p>Đến 5tr đồng - Thuế 5%</p>
+<p>Đến 5tr-10tr đồng - Thuế 10%</p>
+<p>Đến 10tr-18tr đồng - Thuế 15%</p>
+<p>Đến 18tr-32tr đồng - Thuế 20%</p>
+<p>Đến 32tr-52tr đồng - Thuế 25%</p>
+<p>Đến 52tr-80tr đồng - Thuế 30%</p>
+<p>Trên 80tr đồng - Thuế 35%</p>
+
+<script>
+    let a = +prompt('Thu nhập trong tháng này của bạn: ',);
+
+    if (a<5000000) {
+        a1 = a * 0.05
+        alert('Số tiền thuế thu nhập cá nhân là: ' +a1);
+        } else if (a<10000000) {
+            a2 = a * 0.1
+            alert('Số tiền thuế thu nhập cá nhân là: ' +a2);
+            } else if (a<18000000) {
+                a3 = a * 0.15
+                alert('Số tiền thuế thu nhập cá nhân là: ' +a3);
+                } else if (a<32000000) {
+                    a4 = a * 0.2
+                    alert('Số tiền thuê thu nhập cá nhân là: ' +a4);
+                    } else if (a<52000000) {
+                        a5 = a * 0.25
+                        alert('Số tiền thuế thu nhập cá nhân là: ' +a5);
+                        } else if (a<80000000) {
+                            a6 = a * 0.3
+                            alert('Số tiền thuế thu nhập cá nhân là: ' +a6);
+                            } else {
+                                a7 = a * 0.35
+                                alert('Số tiền thuế thu nhập cá nhân là: ' +a7);
+    }
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
