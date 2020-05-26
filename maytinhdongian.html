@@ -6,47 +6,49 @@
 </head>
 <body>
 
-
-        <input name="textview" class="textview">
-
-    <input type="button" onclick="indexNumber(1)" value="1"/>
-    <button type="button" onclick="indexNumber(2)" >2</button>
-    <button type="button" onclick="indexNumber(3)" >3</button>
-    <button type="button" onclick="indexNumber(+)" >+</button>
+<form name="form">
+    <input id="showNumber" type="text">
+</form>
     </br>
-    <button type="button" onclick="indexNumber(4)" >4</button>
-    <button type="button" onclick="indexNumber(5)" >5</button>
-    <button type="button" onclick="indexNumber(6)" >6</button>
-    <button type="button" onclick="indexNumber(-)" >-</button>
+    <button onclick="show(7)">7</button>
+    <button onclick="show(8)">8</button>
+    <button onclick="show(9)">9</button>
+    <button onclick="show('/')">/</button>
     </br>
-    <button type="button" onclick="indexNumber(7)" >7</button>
-    <button type="button" onclick="indexNumber(8)" >8</button>
-    <button type="button" onclick="indexNumber(9)" >9</button>
-    <button type="button" onclick="indexNumber(x)" >x</button>
+    <button onclick="show(4)">4</button>
+    <button onclick="show(5)">5</button>
+    <button onclick="show(6)">6</button>
+    <button onclick="show('*')">x</button>
     </br>
-    <button type="button" onclick="indexNumber(C)" >C</button>
-    <button type="button" onclick="indexNumber(0)" >0</button>
-    <button type="button" onclick="indexNumber(=)" >=</button>
-    <button type="button" onclick="indexNumber(/)" >/</button>
+    <button onclick="show(1)">1</button>
+    <button onclick="show(2)">2</button>
+    <button onclick="show(3)">3</button>
+    <button onclick="show('-')">-</button>
+    </br>
+    <button onclick="show(0)">0</button>
+    <button onclick="deleteNumber()"><</button>
+    <button onclick="equal()">=</button>
+    <button onclick="show('+')">+</button>
+    <button onclick="cleanSreen()">C</button>
 
 
 <script>
-
-    function indexNumber(x) {
-        document.form.textview.value = document.form.textview.value+x
+    function show(x) {
+        document.form.showNumber.value = document.form.showNumber.value + x;
     }
-
+    function equal() {
+        document.form.showNumber.value = eval(document.form.showNumber.value);
     }
-    
+    function cleanSreen() {
 
-
-
-
+        document.form.showNumber.value = "";
+    }
+    function deleteNumber() {
+        let str = document.getElementById("showNumber").value;
+        let res = str.substring(0, str.length - 1);
+        display(res);
+    }
 
 </script>
-
-
-
-
 </body>
 </html>
