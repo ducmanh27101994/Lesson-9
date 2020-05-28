@@ -16,10 +16,10 @@
     function changeImg(index){
         let img = document.getElementById('img'+index);
         let count = Math.floor(Math.random()*3)+1;
-
-        if(count == +img.alt){
-            changeImg(index);
-        }
+        //
+        // if(count == +img.alt){
+        //     changeImg(index);
+        // }
 
         img.alt = count;
         img.src = `images/funny-cat1_part${index}x${count}.jpg`;

@@ -6,13 +6,13 @@
 </head>
 <body>
 <div class="container">
-    <input type="checkbox" id="good" onchange="changed(this)">
+    <input type="checkbox" id="good" onchange="changed(this.id)">
     <label for="good"></label>Good</br>
 
-    <input type="checkbox" id="fast" onchange="changed(this)">
+    <input type="checkbox" id="fast" onchange="changed(this.id)">
     <label for="fast">Fast</label></br>
 
-    <input type="checkbox" id="cheap" onchange="changed(this)">
+    <input type="checkbox" id="cheap" onchange="changed(this.id)">
     <label for="cheap">Cheap</label></br>
 
 </div>
@@ -20,26 +20,28 @@
 
 
 <script>
-    let good = document.querySelector('good');
-    let fast = document.querySelector('fast');
-    let cheap = document.querySelector('cheap');
+    let good = document.getElementById('good');
+    let fast = document.getElementById('fast');
+    let cheap = document.getElementById('cheap');
 
-    function changed(e1) {
-        isGood = good.checked;
-        isFast = fast.checked;
-        isCheap = cheap.checked;
-
-    if (isGood && isFast $$ isCheap $$ e1 === cheap) {
-            fast.checked = false;
+    function changed(id) {
+        switch (id) {
+            case "good":
+                if(fast.checked == true && cheap.checked == true){
+                    cheap.checked = false;
+                }
+                break;
+            case "fast":
+                if(good.checked && cheap.checked){
+                    good.checked = false;
+                }
+                break;
+            case "cheap":
+                if(fast.checked && good.checked == true){
+                    fast.checked = false;
+                }
+                break;
         }
-    if (isGood && isCheap $$ isFast $$ e1 === fast) {
-            good.checked = false;
-        }
-    if (isCheap && isFast $$ isGood $$ e1 === good) {
-           cheap.checked = false;
-        }
-
-
     }
 
 
