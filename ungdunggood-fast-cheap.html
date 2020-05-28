@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Good-Fast-Cheap</title>
+</head>
+<body>
+<div class="container">
+    <input type="checkbox" id="good" onchange="changed(this)">
+    <label for="good"></label>Good</br>
+
+    <input type="checkbox" id="fast" onchange="changed(this)">
+    <label for="fast">Fast</label></br>
+
+    <input type="checkbox" id="cheap" onchange="changed(this)">
+    <label for="cheap">Cheap</label></br>
+
+</div>
+
+
+
+<script>
+    let good = document.querySelector('good');
+    let fast = document.querySelector('fast');
+    let cheap = document.querySelector('cheap');
+
+    function changed(e1) {
+        isGood = good.checked;
+        isFast = fast.checked;
+        isCheap = cheap.checked;
+
+    if (isGood && isFast $$ isCheap $$ e1 === cheap) {
+            fast.checked = false;
+        }
+    if (isGood && isCheap $$ isFast $$ e1 === fast) {
+            good.checked = false;
+        }
+    if (isCheap && isFast $$ isGood $$ e1 === good) {
+           cheap.checked = false;
+        }
+
+
+    }
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

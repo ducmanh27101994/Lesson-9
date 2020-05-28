@@ -26,7 +26,7 @@
     <button onclick="show('-')">-</button>
     </br>
     <button onclick="show(0)">0</button>
-    <button onclick="deleteNumber()"><</button>
+    <button onclick="del()"><</button>
     <button onclick="equal()">=</button>
     <button onclick="show('+')">+</button>
     <button onclick="cleanSreen()">C</button>
@@ -43,10 +43,11 @@
 
         document.form.showNumber.value = "";
     }
-    function deleteNumber() {
+
+    function del() {
         let str = document.getElementById("showNumber").value;
-        let res = str.substring(0, str.length - 1);
-        display(res);
+        document.getElementById("showNumber").value; = document.getElementById("showNumber").value;.substring(0, document.getElementById("showNumber").value;.length - 1);
+
     }
 
 </script>
