@@ -11,21 +11,34 @@
 <p id="result"></p>
 
 <script>
+    let result = document.getElementById('result');
+    let day = 31;
     function showMonthId() {
         let a = +document.getElementById('monthId').value;
 
-        if (a === 1 || a === 3 || a ===5  || a === 7 || a === 9 || a === 11 ) {
-            document.getElementById('result').innerHTML = (`Tháng ${a} có 31 ngày`);
-            } else if (a === 4 || a === 6 || a === 8  || a === 10 || a === 12) {
-            document.getElementById('result').innerHTML = (`Tháng ${a} có 30 ngày`);
-                } else if (a === 2) {
-            document.getElementById('result').innerHTML = (`Tháng ${a} có 28 hoặc 29 ngày`);
-                    } else {
-            document.getElementById('result').innerHTML = ('Không phải tháng trong năm');
+        if (a === 1 || a === 3 || a === 5 || a === 7 || a === 9 || a === 11) {
+            result.innerHTML = (`Tháng ${a} có ${day} ngày`);
+        } else if (a === 4 || a === 6 || a === 8 || a === 10 || a === 12) {
+            result.innerHTML = (`Tháng ${a} có 30 ngày`);
+        } else if (a === 2) {
+            result.innerHTML = (`Tháng ${a} có 28 hoặc 29 ngày`);
+        } else {
+            result.innerHTML = ('Không phải tháng trong năm');
         }
     }
 
+    if(day > 29){
+        alert("day khong phai thang 2");
+    }else {
+        alert("day chac chan la thang 2");
+    }
 
+    if(day > 29)
+        alert("day khong phai thang 2");
+    else
+        alert("day chac chan la thang 2");
+
+    day > 29 ? alert("day khong phai thang 2") : alert("day khong phai thang 2");
 
 </script>
 
